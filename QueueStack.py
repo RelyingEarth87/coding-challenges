@@ -116,6 +116,7 @@ class DoubleQueueStack:
         """
         return self.stack_length == 0
 
+# After quite a lot of thought, I had a huge epiphany... We CAN build a Stack from just a single Queue, with a very similar implementation
 class SingleQueueStack:
     """A Last-In-First-Out Stack, built from a single Queue
     """
