@@ -2,26 +2,60 @@ import sys
 import re
 import os
 
-def bytes_num(filepath):
+def bytes_num(filepath: str) -> int:
+    """Returns the number of bytes in a given file
+
+    Args:
+        filepath (str): the path to/name of the file
+
+    Returns:
+        int: number of bytes in the given file
+    """
     return os.stat(filepath).st_size
 
-def file_lines(filepath):
+def file_lines(filepath: str) -> int:
+    """Returns the number of lines in a given file
+
+    Args:
+        filepath (str): the path to/name of the file
+
+    Returns:
+        int: number of lines in the given file
+    """
     with open(filepath, 'r', encoding='UTF-8') as f:
         lines = f.readlines()
         return len(lines)
 
-def num_words(filepath):
+def num_words(filepath: str) -> int:
+    """Returns the number of words in a given file
+
+    Args:
+        filepath (str): the path to/name of the file
+
+    Returns:
+        int: number of words in the given file
+    """
     with open(filepath, 'r', encoding='UTF-8') as f:
         text = f.read()
         words = text.split(' ')
         return len(words)
 
-def num_chars(filepath):
+def num_chars(filepath: str) -> int:
+    """Returns the number of characters in a given file
+
+    Args:
+        filepath (str): the path to/name of the file
+
+    Returns:
+        int: number of characters in the given file
+    """
     with open(filepath, 'r', encoding='UTF-8') as f:
         text = f.read()
         return len(text)
 
 def main():
+    """Main entry point to handle the arguments and options as well as output
+    """
     args = ''.join(i + ' ' for i in sys.argv[1:])
     try:
         opts = re.search(r'\A-[clwmCLWM]', args).group()
