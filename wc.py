@@ -1,3 +1,6 @@
+"""Completing a challenge to build my own version of a Unix wc tool from:
+https://codingchallenges.fyi/challenges/challenge-wc/"""
+
 import sys
 import re
 import os
