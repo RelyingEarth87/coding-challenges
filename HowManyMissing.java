@@ -2,6 +2,9 @@ import java.util.Arrays;
 
 /**
  * Defines a static method to determine how many numbers are missing in an integer array
+ * Created based on a coding challenge given on <a href="https://slothbytes.beehiiv.com/">SlothBytes</a>
+ * 
+ * @author RelyingEarth87
  */
 public class HowManyMissing {
 	
